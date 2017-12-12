@@ -1,0 +1,28 @@
+header > section
+{
+  display: inline-block;
+  height:100%;
+  vertical-align: top;
+}
+
+.sellerContact
+{
+  margin: 0 5px;
+}
+
+.sellerInfo
+{
+  width: 60%;
+}
+
+.sellerLogo
+{
+  text-align: right;
+  width: 30%;
+}
+
+#sellerImg
+{
+  width: 50%;
+  min-width:150px;
+}

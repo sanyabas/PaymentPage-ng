@@ -1,0 +1,16 @@
+body
+{
+  background: #fafafa;
+}
+
+.wrapper
+{
+  width: 90%;
+  margin: auto;
+  border: 2px solid rgba(210, 212, 212, 0.69);
+  background: #ffffff;
+  box-shadow: 0 0 15px rgba(154, 156, 156, 0.82);
+  padding: 30px;
+  box-sizing: border-box;
+  font: 16px 'Rubik', sans-serif;
+}

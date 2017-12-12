@@ -1,0 +1,65 @@
+.socialButtons
+{
+  margin-top: 50px;
+}
+
+
+.shareButton
+{
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  background: #e8e8e8;
+  margin: 5px;
+
+}
+
+.socialButtons .fa
+{
+  font-size: 1.2em;
+}
+
+a.facebook
+{
+  color: #3B5998;
+}
+
+.facebook:hover
+{
+  background: #3B5998;
+  color: #fff;
+}
+
+a.twitter
+{
+  color: #55ACEE;
+}
+
+.twitter:hover
+{
+  background: #55ACEE;
+  color: #fff;
+}
+
+a.google
+{
+  color: #ea4335;
+}
+
+.google:hover
+{
+  background: #ea4335;
+  color: #fff;
+}
+
+a.vk
+{
+  color: #5281b7;
+}
+
+.vk:hover
+{
+  background: #5281b7;
+  color: #fff;
+}

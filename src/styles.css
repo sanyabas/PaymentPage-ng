@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+a
+{
+  text-decoration: none;
+}
+
+a:focus
+{
+  outline: none;
+}
+
+a,
+a:visited
+{
+  color: #1c1fb2;
+}
+
+@media screen and (max-width: 768px)
+{
+  header.header>section.headerSection.sellerLogo,
+  header.header>section.headerSection.sellerInfo,
+  div.anyBank.colLeft,
+  div.anyBank.colRight
+  {
+    display: block;
+  }
+
+  div.anyBank.colLeft,
+  div.anyBank.colRight
+  {
+    width: auto;
+    margin:auto;
+  }
+
+  .colLeft
+  {
+    width: 60%
+  }
+
+  figure.sellerGood.good
+  {
+    width: 40%;
+  }
+
+  .cardImg
+  {
+    width: auto;
+  }
+
+  div.wrapper.wrapper2
+  {
+    width: auto;
+    padding: 2%;
+  }
+}
+
+@media screen and (max-width: 500px)
+{
+  figure.sellerGood.good
+  {
+    display: block;
+    width: auto;
+  }
+
+  div.anyBank.colLeft
+  {
+    width: auto;
+  }
+}

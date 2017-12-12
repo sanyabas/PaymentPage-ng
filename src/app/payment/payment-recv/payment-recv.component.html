@@ -1,0 +1,45 @@
+Создайте платёжку, а ООО "VoidHack" подпишет её у себя в интернет-банке
+<form>
+  <div class="formRow">
+    <label class="reqLabel" for="reqTo">ИНН получателя</label>
+    <input type="text" placeholder="ИНН или название получателя"
+           class="reqPaymentInput" id="reqTo" minlength="10" maxlength="12"
+           pattern="\d{10,12}" required>
+  </div>
+  <div class="formRow">
+    <label class="reqLabel" for="reqBik">БИК</label>
+    <input type="text" class="reqPaymentInput" id="reqBik" minlength="9"
+           maxlength="9" pattern="\d{9}" required>
+  </div>
+  <div class="formRow">
+    <label class="reqLabel" for="reqAccount">Номер счёта</label>
+    <input type="text" class="reqPaymentInput" id="reqAccount" pattern="\d{20}"
+           maxlength="20" required>
+  </div>
+  <div class="formRow">
+    <label class="reqLabel" for="reqGoal">За что</label>
+    <input type="text" placeholder="Назначение платежа" class="reqPaymentInput"
+           id="reqGoal" pattern=".*((НДС 18%)|(НДС 10%)|(без НДС)).*" required>
+  </div>
+  <div class="formRow">
+    <label class="reqLabel" for="reqSum">Сколько</label>
+    <input type="number" placeholder="От 1000 до 75000" class="reqPaymentInput"
+           id="reqSum" min="1000" max="75000" required>
+  </div>
+  <div class="formRow">
+    <label class="reqLabel" for="reqPhone">Номер телефона</label>
+    <input type="tel" value="+7" class="reqPaymentInput" id="reqPhone"
+           maxlength="12" pattern="\+79\d{9}">
+  </div>
+  <div class="formRow">
+    <label class="reqLabel" for="reqMail">Эл.почта</label>
+    <input type="email" placeholder="Для уведомлений об оплате"
+           class="reqPaymentInput" id="reqMail" required>
+  </div>
+  <div class="formRow">
+    <input class="formButton" type="submit" value="Создать платёж" disabled>
+  </div>
+  <div class="formRow">
+    <input class="formButton" type="reset" value="Очистить форму">
+  </div>
+</form>
