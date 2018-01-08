@@ -1,35 +1,35 @@
 Сформируйте платёжку и загрузите её в свой банк для подписи
-<form>
+<form #bankPaymentForm="ngForm" (ngSubmit)="onSubmit()" ngNativeValidate>
   <div class="formRow">
     <label class="inBankLabel" for="inBankFrom">От кого</label>
     <input type="text" placeholder="ИНН или название плательщика"
            id="inBankFrom" class="bankInput" minlength="10" maxlength="12"
-           pattern="\d{10,12}" required>
+           pattern="\d{10,12}" required [(ngModel)]="payment.from" name="from">
   </div>
   <div class="formRow">
     <label class="inBankLabel" for="bankBik">БИК</label>
     <input type="text" id="bankBik" class="bankInput" minlength="9"
-           maxlength="9" pattern="\d{9}" required>
+           maxlength="9" pattern="\d{9}" required [(ngModel)]="payment.bik" name="bik">
   </div>
   <div class="formRow">
     <label class="inBankLabel" for="bankAccount">Номер счёта</label>
     <input type="text" id="bankAccount" class="bankInput" pattern="\d{20}"
-           maxlength="20" required>
+           maxlength="20" required [(ngModel)]="payment.account" name="account">
   </div>
   <div class="formRow">
     <label class="inBankLabel" for="bankGoal">За что</label>
     <input type="text" placeholder="Назначение платежа" id="bankGoal"
            class="bankInput" pattern=".*((НДС 18%)|(НДС 10%)|(без НДС)).*"
-           required>
+           required [(ngModel)]="payment.purpose" name="purpose">
   </div>
   <div class="formRow">
     <label class="inBankLabel" for="bankSum">Сколько</label>
     <input type="number" placeholder="От 1000 до 75000" id="bankSum"
-           class="bankInput" min="1000" max="75000" required>
+           class="bankInput" min="1000" max="75000" required [(ngModel)]="payment.sum" name="sum">
   </div>
   <div class="formRow">
     <input class="formButton" type="submit"
-           value="Получить файл для интернет-банка" disabled>
+           value="Получить файл для интернет-банка" [disabled]="!bankPaymentForm.form.valid">
   </div>
   <div class="formRow">
     <input class="formButton" type="reset" value="Очистить форму">

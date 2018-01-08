@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {CardPayment} from './card-payment';
 
 @Component({
   selector: 'app-any-card',
@@ -8,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnyCardComponent implements OnInit {
 
-  constructor() { }
+  payment = new CardPayment(undefined, undefined, undefined, undefined, undefined, undefined);
+  submitted = false;
+
+  onSubmit() {
+    this.submitted = true;
+  }
+
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  get diagnostic(){
+    return JSON.stringify(this.payment);
   }
 
 }

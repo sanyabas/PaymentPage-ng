@@ -1,8 +1,7 @@
 <ul class="tabs" id="paymentSource">
-  <li><a href="#anyBank"><span class="fa fa-credit-card"></span> С карты любого
+  <li><a routerLink="/send/card" routerLinkActive="send-tab-active"><span class="fa fa-credit-card"></span> С карты любого
     банка</a></li>
-  <li><a href="#internetBank"><span class="fa fa-desktop"></span> Из своего
+  <li><a routerLink="/send/internet-bank" routerLinkActive="send-tab-active"><span class="fa fa-desktop"></span> Из своего
     интернет-банка</a></li>
 </ul>
-<app-any-card></app-any-card>
-<app-internet-bank></app-internet-bank>
+<router-outlet></router-outlet>

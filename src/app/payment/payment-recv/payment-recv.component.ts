@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {PaymentRequest} from './payment-request';
 
 @Component({
   selector: 'app-payment-recv',
@@ -8,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaymentRecvComponent implements OnInit {
 
-  constructor() { }
+  request = new PaymentRequest(undefined, undefined, undefined, undefined, undefined, undefined, undefined);
+
+  constructor() {
+  }
+
+  onSubmit() {
+  }
 
   ngOnInit() {
   }

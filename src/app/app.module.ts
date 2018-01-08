@@ -13,6 +13,9 @@ import {AnyCardComponent} from './payment/payment-send/any-card/any-card.compone
 import {InternetBankComponent} from './payment/payment-send/internet-bank/internet-bank.component';
 import {GoodsComponent} from './goods/goods.component';
 import {FooterComponent} from './footer/footer.component';
+import {PaymentSendRoutingModule} from './payment/payment-send/payment-send-routing.module';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 const appRoutes: Routes = [
   {path: 'send', component: PaymentSendComponent},
@@ -33,7 +36,10 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    PaymentSendRoutingModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {BankPayment} from './bank-payment';
 
 @Component({
   selector: 'app-internet-bank',
@@ -8,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InternetBankComponent implements OnInit {
 
-  constructor() { }
+  payment = new BankPayment(undefined, undefined, undefined, undefined, undefined);
+
+  onSubmit() {
+  }
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

@@ -1,43 +1,43 @@
 Создайте платёжку, а ООО "VoidHack" подпишет её у себя в интернет-банке
-<form>
+<form #bankRequestForm="ngForm" (ngSubmit)="onSubmit()" ngNativeValidate>
   <div class="formRow">
     <label class="reqLabel" for="reqTo">ИНН получателя</label>
     <input type="text" placeholder="ИНН или название получателя"
            class="reqPaymentInput" id="reqTo" minlength="10" maxlength="12"
-           pattern="\d{10,12}" required>
+           pattern="\d{10,12}" required [(ngModel)]="request.to" name="to">
   </div>
   <div class="formRow">
     <label class="reqLabel" for="reqBik">БИК</label>
     <input type="text" class="reqPaymentInput" id="reqBik" minlength="9"
-           maxlength="9" pattern="\d{9}" required>
+           maxlength="9" pattern="\d{9}" required [(ngModel)]="request.bik" name="bik">
   </div>
   <div class="formRow">
     <label class="reqLabel" for="reqAccount">Номер счёта</label>
     <input type="text" class="reqPaymentInput" id="reqAccount" pattern="\d{20}"
-           maxlength="20" required>
+           maxlength="20" required [(ngModel)]="request.account" name="account">
   </div>
   <div class="formRow">
     <label class="reqLabel" for="reqGoal">За что</label>
     <input type="text" placeholder="Назначение платежа" class="reqPaymentInput"
-           id="reqGoal" pattern=".*((НДС 18%)|(НДС 10%)|(без НДС)).*" required>
+           id="reqGoal" pattern=".*((НДС 18%)|(НДС 10%)|(без НДС)).*" required [(ngModel)]="request.purpose" name="purpose">
   </div>
   <div class="formRow">
     <label class="reqLabel" for="reqSum">Сколько</label>
     <input type="number" placeholder="От 1000 до 75000" class="reqPaymentInput"
-           id="reqSum" min="1000" max="75000" required>
+           id="reqSum" min="1000" max="75000" required [(ngModel)]="request.sum" name="sum">
   </div>
   <div class="formRow">
     <label class="reqLabel" for="reqPhone">Номер телефона</label>
     <input type="tel" value="+7" class="reqPaymentInput" id="reqPhone"
-           maxlength="12" pattern="\+79\d{9}">
+           maxlength="12" pattern="\+79\d{9}" [(ngModel)]="request.phone" name="phone">
   </div>
   <div class="formRow">
     <label class="reqLabel" for="reqMail">Эл.почта</label>
     <input type="email" placeholder="Для уведомлений об оплате"
-           class="reqPaymentInput" id="reqMail" required>
+           class="reqPaymentInput" id="reqMail" required [(ngModel)]="request.email" name="email">
   </div>
   <div class="formRow">
-    <input class="formButton" type="submit" value="Создать платёж" disabled>
+    <input class="formButton" type="submit" value="Создать платёж" [disabled]="!bankRequestForm.form.valid">
   </div>
   <div class="formRow">
     <input class="formButton" type="reset" value="Очистить форму">
