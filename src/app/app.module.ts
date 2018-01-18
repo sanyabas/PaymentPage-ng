@@ -16,6 +16,7 @@ import {FooterComponent} from './footer/footer.component';
 import {PaymentSendRoutingModule} from './payment/payment-send/payment-send-routing.module';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import {BankingService} from './banking-service.service';
 
 const appRoutes: Routes = [
   {path: 'send', component: PaymentSendComponent},
@@ -41,7 +42,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [BankingService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

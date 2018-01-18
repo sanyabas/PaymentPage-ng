@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CardPayment} from './card-payment';
+import {BankingService} from '../../../banking-service.service';
 
 @Component({
   selector: 'app-any-card',
@@ -14,15 +15,16 @@ export class AnyCardComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
+    this.banking.sendCardPayment(this.payment);
   }
 
-  constructor() {
+  constructor(private banking: BankingService) {
   }
 
   ngOnInit() {
   }
 
-  get diagnostic(){
+  get diagnostic() {
     return JSON.stringify(this.payment);
   }
 
