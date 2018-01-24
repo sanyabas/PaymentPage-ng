@@ -4,6 +4,7 @@ import {Payment} from './payment/payment';
 import {BankPayment} from './payment/payment-send/internet-bank/bank-payment';
 import {PaymentRequest} from './payment/payment-recv/payment-request';
 import {CardPayment} from './payment/payment-send/any-card/card-payment';
+import {of} from 'rxjs/observable/of';
 // import * as url from 'url';
 
 // const URL = require('url');
@@ -26,29 +27,30 @@ export class BankingService {
     const jsoned = JSON.stringify(payment);
     // const finalUrl = new URL(this.cardUrl, this.bankUrl).toString();
     const finalUrl = this.bankUrl + this.cardUrl;
-    this.send(finalUrl, jsoned);
+    return this.send(finalUrl, jsoned);
   }
 
   sendBankPayment(payment: BankPayment) {
     const jsoned = JSON.stringify(payment);
     const finalUrl = this.bankUrl + this.bankPayUrl;
-    this.send(finalUrl, jsoned);
+    return this.send(finalUrl, jsoned);
   }
 
   sendPaymentRequest(request: PaymentRequest) {
     const jsoned = JSON.stringify(request);
     const finalUrl = this.bankUrl + this.requestUrl;
-    this.send(finalUrl, jsoned);
+    return this.send(finalUrl, jsoned);
   }
 
   send(url, body: string) {
-    this.http.post(url, body, this.httpOptions).subscribe(result => {
-        console.log(result);
-      },
-      error => {
-        console.error(error);
-      });
-    console.log('sent');
+    return this.http.post(url, body, this.httpOptions);
+      // .subscribe(result => {
+      //     console.log(result);
+      //   },
+      //   error => {
+      //     console.error(error);
+      //   });
+    // console.log('sent');
   }
 
 }

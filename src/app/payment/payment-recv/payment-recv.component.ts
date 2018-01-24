@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {PaymentRequest} from './payment-request';
 import {BankingService} from '../../banking-service.service';
+// import * as Cleave from 'cleave.js';
+
 
 @Component({
   selector: 'app-payment-recv',
@@ -20,6 +22,10 @@ export class PaymentRecvComponent implements OnInit {
   }
 
   ngOnInit() {
+    // const Cleave = require('cleave.js');
+    // const field = new Cleave('#reqPhone', {
+    //   phone: true
+    // });
   }
 
 }

@@ -14,7 +14,7 @@ import {InternetBankComponent} from './payment/payment-send/internet-bank/intern
 import {GoodsComponent} from './goods/goods.component';
 import {FooterComponent} from './footer/footer.component';
 import {PaymentSendRoutingModule} from './payment/payment-send/payment-send-routing.module';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {BankingService} from './banking-service.service';
 
@@ -39,6 +39,7 @@ const appRoutes: Routes = [
     BrowserModule,
     PaymentSendRoutingModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FormsModule,
     HttpClientModule
   ],

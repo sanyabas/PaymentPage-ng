@@ -28,8 +28,8 @@
   </div>
   <div class="formRow">
     <label class="reqLabel" for="reqPhone">Номер телефона</label>
-    <input type="tel" value="+7" class="reqPaymentInput" id="reqPhone"
-           maxlength="12" pattern="\+79\d{9}" [(ngModel)]="request.phone" name="phone">
+    <input type="text" value="+7" class="reqPaymentInput" id="reqPhone"
+           [(ngModel)]="request.phone" name="phone">
   </div>
   <div class="formRow">
     <label class="reqLabel" for="reqMail">Эл.почта</label>
