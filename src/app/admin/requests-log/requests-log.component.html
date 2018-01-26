@@ -1,0 +1,24 @@
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>ИНН получателя</th>
+    <th>БИК</th>
+    <th>Номер счёта</th>
+    <th>За что</th>
+    <th>Сколько</th>
+    <th>Номер телефона</th>
+    <th>Email</th>
+  </tr>
+  </thead>
+  <tr *ngFor="let request of requests">
+    <td>{{request.id}}</td>
+    <td>{{request.to}}</td>
+    <td>{{request.bik}}</td>
+    <td>{{request.account}}</td>
+    <td>{{request.goal}}</td>
+    <td>{{request.sum}}</td>
+    <td>{{request.phone}}</td>
+    <td>{{request.email}}</td>
+  </tr>
+</table>

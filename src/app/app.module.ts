@@ -17,6 +17,12 @@ import {PaymentSendRoutingModule} from './payment/payment-send/payment-send-rout
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {BankingService} from './banking-service.service';
+import { PaymentPageComponent } from './payment-page/payment-page.component';
+import { AdminComponent } from './admin/admin.component';
+import { LoginComponent } from './admin/login/login.component';
+import { CardsLogComponent } from './admin/cards-log/cards-log.component';
+import { RequestsLogComponent } from './admin/requests-log/requests-log.component';
+import { LogsComponent } from './admin/logs/logs.component';
 
 const appRoutes: Routes = [
   {path: 'send', component: PaymentSendComponent},
@@ -33,11 +39,17 @@ const appRoutes: Routes = [
     AnyCardComponent,
     InternetBankComponent,
     GoodsComponent,
-    FooterComponent
+    FooterComponent,
+    PaymentPageComponent,
+    AdminComponent,
+    LoginComponent,
+    CardsLogComponent,
+    RequestsLogComponent,
+    LogsComponent
   ],
   imports: [
     BrowserModule,
-    PaymentSendRoutingModule,
+    // PaymentSendRoutingModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,

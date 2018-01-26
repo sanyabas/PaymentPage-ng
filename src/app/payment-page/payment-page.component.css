@@ -1,3 +1,8 @@
+body
+{
+  background: #fafafa;
+}
+
 .wrapper
 {
   width: 90%;
@@ -9,5 +14,3 @@
   box-sizing: border-box;
   font: 16px 'Rubik', sans-serif;
 }
-
-

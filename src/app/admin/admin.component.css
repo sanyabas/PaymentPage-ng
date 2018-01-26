@@ -1,5 +1,5 @@
-.wrapper
-{
+main{
+
   width: 90%;
   margin: auto;
   border: 2px solid rgba(210, 212, 212, 0.69);
@@ -10,4 +10,7 @@
   font: 16px 'Rubik', sans-serif;
 }
 
-
+. table
+{
+  text-align: center;
+}

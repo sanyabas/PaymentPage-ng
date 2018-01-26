@@ -19,6 +19,9 @@ export class BankingService {
   private httpOptions = {
     headers: new HttpHeaders({'Content-Type': 'application/json'})
   };
+  private unsafeBody = {
+    notSafe: true
+  };
 
   constructor(private http: HttpClient) {
   }
@@ -44,13 +47,28 @@ export class BankingService {
 
   send(url, body: string) {
     return this.http.post(url, body, this.httpOptions);
-      // .subscribe(result => {
-      //     console.log(result);
-      //   },
-      //   error => {
-      //     console.error(error);
-      //   });
+    // .subscribe(result => {
+    //     console.log(result);
+    //   },
+    //   error => {
+    //     console.error(error);
+    //   });
     // console.log('sent');
+  }
+
+  getPayments() {
+    const finalUrl = this.bankUrl + this.cardUrl;
+    return this.http.get(finalUrl);
+  }
+
+  markCardPaymentUnsafe(id) {
+    const finalUrl = this.bankUrl + this.cardUrl + id;
+    return this.http.put(finalUrl, this.unsafeBody).subscribe(result => console.log(result));
+  }
+
+  getRequests() {
+    const finalUrl = this.bankUrl + this.requestUrl;
+    return this.http.get(finalUrl);
   }
 
 }
