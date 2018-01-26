@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {Payment} from './payment/payment';
-import {BankPayment} from './payment/payment-send/internet-bank/bank-payment';
-import {PaymentRequest} from './payment/payment-recv/payment-request';
-import {CardPayment} from './payment/payment-send/any-card/card-payment';
+import {Payment} from './payment-page/payment/payment';
+import {BankPayment} from './payment-page/payment/payment-send/internet-bank/bank-payment';
+import {PaymentRequest} from './payment-page/payment/payment-recv/payment-request';
+import {CardPayment} from './payment-page/payment/payment-send/any-card/card-payment';
 import {of} from 'rxjs/observable/of';
 // import * as url from 'url';
 

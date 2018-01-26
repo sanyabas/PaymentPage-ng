@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {PaymentRequest} from './payment-request';
-import {BankingService} from '../../banking-service.service';
+import {BankingService} from '../../../banking-service.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 

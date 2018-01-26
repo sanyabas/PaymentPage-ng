@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {BankingService} from '../../banking-service.service';
+import {BankingService} from '../../../banking-service.service';
 
 @Component({
   selector: 'app-requests-log',

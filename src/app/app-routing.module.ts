@@ -1,15 +1,15 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
-import {PaymentSendComponent} from './payment/payment-send/payment-send.component';
-import {PaymentRecvComponent} from './payment/payment-recv/payment-recv.component';
+import {PaymentSendComponent} from './payment-page/payment/payment-send/payment-send.component';
+import {PaymentRecvComponent} from './payment-page/payment/payment-recv/payment-recv.component';
 import {AdminComponent} from './admin/admin.component';
 import {PaymentPageComponent} from './payment-page/payment-page.component';
-import {AnyCardComponent} from './payment/payment-send/any-card/any-card.component';
-import {InternetBankComponent} from './payment/payment-send/internet-bank/internet-bank.component';
+import {AnyCardComponent} from './payment-page/payment/payment-send/any-card/any-card.component';
+import {InternetBankComponent} from './payment-page/payment/payment-send/internet-bank/internet-bank.component';
 import {LoginComponent} from './admin/login/login.component';
-import {CardsLogComponent} from './admin/cards-log/cards-log.component';
-import {RequestsLogComponent} from './admin/requests-log/requests-log.component';
+import {CardsLogComponent} from './admin/logs/cards-log/cards-log.component';
+import {RequestsLogComponent} from './admin/logs/requests-log/requests-log.component';
 import {LogsComponent} from './admin/logs/logs.component';
 
 const appRoutes: Routes = [
