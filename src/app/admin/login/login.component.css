@@ -32,3 +32,14 @@ input:invalid
 {
   border-bottom: 1px solid rgba(239, 49, 53, 0.8);
 }
+
+.loginError{
+  font-size: 20px;
+  padding: 20px;
+  width: 200px;
+  margin: auto;
+}
+
+.close{
+  cursor: pointer;
+}

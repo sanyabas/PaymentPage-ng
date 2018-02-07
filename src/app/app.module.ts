@@ -23,6 +23,9 @@ import { LoginComponent } from './admin/login/login.component';
 import { CardsLogComponent } from './admin/logs/cards-log/cards-log.component';
 import { RequestsLogComponent } from './admin/logs/requests-log/requests-log.component';
 import { LogsComponent } from './admin/logs/logs.component';
+import {AuthService} from './admin/auth.service';
+import {LoginRedirectService} from './admin/login-redirect.service';
+import {AuthCheckService} from './admin/auth-check.service';
 
 const appRoutes: Routes = [
   {path: 'send', component: PaymentSendComponent},
@@ -55,7 +58,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpClientModule
   ],
-  providers: [BankingService],
+  providers: [BankingService, AuthService, LoginRedirectService, AuthCheckService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

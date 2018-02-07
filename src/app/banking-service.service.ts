@@ -58,17 +58,27 @@ export class BankingService {
 
   getPayments() {
     const finalUrl = this.bankUrl + this.cardUrl;
-    return this.http.get(finalUrl);
+    return this.http.get(finalUrl, this.get_auth() || {});
   }
 
   markCardPaymentUnsafe(id) {
     const finalUrl = this.bankUrl + this.cardUrl + id;
-    return this.http.put(finalUrl, this.unsafeBody).subscribe(result => console.log(result));
+    return this.http.put(finalUrl, this.unsafeBody, this.get_auth() || {});
   }
 
   getRequests() {
     const finalUrl = this.bankUrl + this.requestUrl;
-    return this.http.get(finalUrl);
+    return this.http.get(finalUrl, this.get_auth() || {});
+  }
+
+  private get_auth() {
+    const token = localStorage.getItem('token');
+    if (token) {
+      const options = {
+        headers: new HttpHeaders({Authorization: `Bearer ${token}`})
+      };
+      return options;
+    }
   }
 
 }

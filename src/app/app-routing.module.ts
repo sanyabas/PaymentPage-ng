@@ -11,19 +11,21 @@ import {LoginComponent} from './admin/login/login.component';
 import {CardsLogComponent} from './admin/logs/cards-log/cards-log.component';
 import {RequestsLogComponent} from './admin/logs/requests-log/requests-log.component';
 import {LogsComponent} from './admin/logs/logs.component';
+import {LoginRedirectService} from './admin/login-redirect.service';
+import {AuthCheckService} from './admin/auth-check.service';
 
 const appRoutes: Routes = [
   {
     path: 'admin', component: AdminComponent, children: [
-      {path: 'login', component: LoginComponent},
+      {path: 'login', component: LoginComponent, canActivate: [LoginRedirectService]},
       {
         path: 'logs', component: LogsComponent, children: [
-          {path: 'card', component: CardsLogComponent},
-          {path: 'requests', component: RequestsLogComponent},
+          {path: 'card', component: CardsLogComponent, canActivate: [AuthCheckService]},
+          {path: 'requests', component: RequestsLogComponent, canActivate: [AuthCheckService]},
           {path: '', redirectTo: '/admin/logs/card', pathMatch: 'full'}
         ]
       },
-      {path: '', redirectTo: '/admin/logs/card', pathMatch: 'full'}
+      {path: '', redirectTo: '/admin/login', pathMatch: 'full'}
     ]
   },
   {

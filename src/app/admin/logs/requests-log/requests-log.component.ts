@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {BankingService} from '../../../banking-service.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-requests-log',
@@ -9,7 +10,7 @@ import {BankingService} from '../../../banking-service.service';
 export class RequestsLogComponent implements OnInit {
   private requests;
 
-  constructor(private banking: BankingService) {
+  constructor(private banking: BankingService, private router: Router) {
   }
 
   ngOnInit() {
@@ -17,7 +18,11 @@ export class RequestsLogComponent implements OnInit {
   }
 
   getRequests() {
-    this.banking.getRequests().subscribe(result => this.requests = result['values']);
+    this.banking.getRequests().subscribe(result => this.requests = result['values'], error => {
+      console.error(error);
+      localStorage.removeItem('token');
+      this.router.navigateByUrl('/admin/login');
+    });
   }
 
 }
