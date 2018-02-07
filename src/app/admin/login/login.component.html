@@ -1,0 +1,12 @@
+<div class="loginBox">
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <label for="login">Логин</label>
+    <input type="text" class="login" id="login" formControlName="login">
+    <label for="password">Пароль</label>
+    <input type="password" class="password" id="password" formControlName="password">
+    <input type="submit" [disabled]="loginForm.invalid">
+  </form>
+</div>
+<div *ngIf="authError" class="alert-danger loginError">
+  Ошибка входа <span class="close" (click)="hideError()">&times;</span>
+</div>

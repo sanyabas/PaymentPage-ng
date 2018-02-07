@@ -1,0 +1,29 @@
+<div *ngIf="authError">
+  <div class="alert-danger">
+    Ошибка входа. <a href="/admin/login">Попробуйте ещё раз</a>
+  </div>
+</div>
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Номер карты</th>
+    <th>Срок действия</th>
+    <th>CVC</th>
+    <th>Сумма</th>
+    <th>Комментарий</th>
+    <th>Email</th>
+    <th>Небезопасный</th>
+  </tr>
+  </thead>
+  <tr *ngFor="let payment of payments">
+    <td>{{payment.id}}</td>
+    <td>{{payment.cardNumber}}</td>
+    <td>{{payment.expiration}}</td>
+    <td>{{payment.cvc}}</td>
+    <td>{{payment.sum}}</td>
+    <td>{{payment.comment}}</td>
+    <td>{{payment.email}}</td>
+    <td><input type="checkbox" [checked]="payment.notSafe" (change)="markUnsafe(payment.id)"></td>
+  </tr>
+</table>
