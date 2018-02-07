@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {CardPayment} from './card-payment';
-import {BankingService} from '../../../banking-service.service';
+import {BankingService} from '../../../../banking-service.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Observable} from 'rxjs/Observable';
 
 @Component({
   selector: 'app-any-card',
