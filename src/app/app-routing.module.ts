@@ -41,8 +41,6 @@ const appRoutes: Routes = [
     ],
   },
   {path: '', redirectTo: '/payment/send/card', pathMatch: 'full'}
-  // {path: 'send', component: PaymentSendComponent},
-  // {path: 'send', redirectTo: '/send/card', pathMatch: 'full'}
 ];
 
 @NgModule({

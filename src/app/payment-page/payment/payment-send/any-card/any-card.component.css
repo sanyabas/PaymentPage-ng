@@ -1,12 +1,10 @@
-.anyBank
-{
+.anyBank {
   display: inline-block;
   width: 49%;
   vertical-align: top;
 }
 
-.cardImg
-{
+.cardImg {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 6px #000;
@@ -15,61 +13,51 @@
   margin: auto;
 }
 
-.cardLogos
-{
+.cardLogos {
   text-align: right;
 }
 
-.cardLogo
-{
+.cardLogo {
   width: 15%;
   vertical-align: middle;
 }
 
-input
-{
+input {
   height: 30px;
   border: none;
   border-bottom: 1px solid #bfbfbf;
 }
 
-input:focus
-{
+input:focus {
   outline: none;
 }
 
-input:valid
-{
+input:valid {
   border-bottom: 1px solid rgba(61, 209, 53, 0.8);
 }
 
-input:invalid
-{
+input:invalid {
   border-bottom: 1px solid rgba(239, 49, 53, 0.8);
 }
 
-.cardInput
-{
+.cardInput {
   margin: 10px 10px;
   background: rgba(0, 0, 0, 0);
 }
 
-.cardInput:first-of-type
-{
+.cardInput:first-of-type {
   width: 70%;
   margin-top: 10%;
 }
 
-#cardNumber
-{
+#cardNumber {
   display: block;
   height: 30px;
   top: 70px;
 }
 
 #valid,
-#cvc
-{
+#cvc {
   display: inline-block;
   width: 60px;
   top: 90px;

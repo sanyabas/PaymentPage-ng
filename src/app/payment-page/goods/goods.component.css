@@ -1,13 +1,10 @@
-.sellerGoods
-{
-  width: 100%; //относительно чего ширина для позиционированных элементов
-display: block;
+.sellerGoods {
+  width: 100%;
   margin: auto;
   text-align: center;
 }
 
-.sellerGood
-{
+.sellerGood {
   min-height: 200px;
   display: inline-block;
   margin: 1%;
@@ -18,25 +15,21 @@ display: block;
   padding: 10px;
 }
 
-.goodImg
-{
+.goodImg {
   width: 100%;
   display: block;
 }
 
 .goodCaption,
-.goodPrice
-{
+.goodPrice {
   text-align: left;
   margin: 10px 0;
 }
 
-.goodCaption
-{
+.goodCaption {
   font-weight: 600;
 }
 
-.goodPrice
-{
+.goodPrice {
   color: #8d8d8d;
 }

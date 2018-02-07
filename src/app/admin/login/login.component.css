@@ -1,45 +1,40 @@
-.loginBox{
-  width:20%;
+.loginBox {
+  width: 20%;
   margin: auto;
   border: 2px solid #000000;
   padding: 10px;
 }
 
-.loginBox input{
+.loginBox input {
   display: inline-block;
-  /*text-align: right;*/
   margin: 20px 5px 20px 20px;
 }
 
-input
-{
+input {
   height: 30px;
   border: none;
   border-bottom: 1px solid #bfbfbf;
 }
 
-input:focus
-{
+input:focus {
   outline: none;
 }
 
-input:valid
-{
+input:valid {
   border-bottom: 1px solid rgba(61, 209, 53, 0.8);
 }
 
-input:invalid
-{
+input:invalid {
   border-bottom: 1px solid rgba(239, 49, 53, 0.8);
 }
 
-.loginError{
+.loginError {
   font-size: 20px;
   padding: 20px;
   width: 200px;
   margin: auto;
 }
 
-.close{
+.close {
   cursor: pointer;
 }

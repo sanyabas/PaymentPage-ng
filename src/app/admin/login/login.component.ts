@@ -51,10 +51,6 @@ export class LoginComponent implements OnInit {
     if (token) {
       this.auth.tokenIsAuthenticated(token).subscribe(data => {
         console.log(data);
-        // if (data['ok'] === 'true') {
-        //   return true;
-        // }
-        // console.log(data['ok']);
         if (data['ok'] === 'true') {
           this.isLoggedIn = true;
         }

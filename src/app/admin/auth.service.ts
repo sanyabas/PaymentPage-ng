@@ -24,10 +24,6 @@ export class AuthService {
     if (token) {
       this.tokenIsAuthenticated(token).subscribe(data => {
         console.log(data);
-        // if (data['ok'] === 'true') {
-        //   return true;
-        // }
-        // console.log(data['ok']);
         if (data['ok'] === 'true') {
           this.isAuthenticated = true;
         }
@@ -36,7 +32,4 @@ export class AuthService {
       this.isAuthenticated = false;
     }
   }
-
-  // isAuthorized(user)
-
 }

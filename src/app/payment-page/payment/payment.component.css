@@ -1,18 +1,15 @@
-.tabs
-{
+.tabs {
   list-style: none;
   padding: 0;
 }
 
-.tabs > li
-{
+.tabs > li {
   display: inline-block;
   margin-right: 20px;
   font-size: 1.3em;
 }
 
 .ui-tabs-active > a,
-.ui-tabs-active > a:active
-{
+.ui-tabs-active > a:active {
   color: #000;
 }

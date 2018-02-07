@@ -1,55 +1,45 @@
-input
-{
+input {
   height: 30px;
   border: none;
   border-bottom: 1px solid #bfbfbf;
 }
 
-input:focus
-{
+input:focus {
   outline: none;
 }
 
-input:valid
-{
+input:valid {
   border-bottom: 1px solid rgba(61, 209, 53, 0.8);
 }
 
-input:invalid
-{
+input:invalid {
   border-bottom: 1px solid rgba(239, 49, 53, 0.8);
 }
 
-
 .infoLabel,
 .inBankLabel,
-.reqLabel
-{
+.reqLabel {
   display: inline-block;
   text-align: left;
   width: 30%;
   min-width: 120px;
 }
 
-.infoInput
-{
+.infoInput {
   width: 60%;
 }
 
-.inBankLabel
-{
+.inBankLabel {
   display: inline-block;
 }
 
 .bankInput,
-.reqPaymentInput
-{
+.reqPaymentInput {
   width: 50%;
 }
 
 input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button
-{
+input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -57,38 +47,31 @@ input[type=number]::-webkit-outer-spin-button
 }
 
 #bankSum,
-#reqSum
-{
+#reqSum {
   width: 30%;
 }
 
-.formRow
-{
+.formRow {
   margin: 10px 0;
 }
 
-.formButton
-{
+.formButton {
   padding: 1px 10px;
 }
 
-.formButton:enabled:hover
-{
-  opacity:0.8;
+.formButton:enabled:hover {
+  opacity: 0.8;
 }
 
-.formButton[type=submit]
-{
-  background-color: rgba(84,232,76,0.66);
+.formButton[type=submit] {
+  background-color: rgba(84, 232, 76, 0.66);
 }
 
-.formButton[type=reset]
-{
-  background-color: rgba(232,66,64,0.66);
+.formButton[type=reset] {
+  background-color: rgba(232, 66, 64, 0.66);
 }
 
-.formButton[type=reset]:active
-{
+.formButton[type=reset]:active {
   background-color: rgba(207, 60, 58, 0.8);
-  opacity:1;
+  opacity: 1;
 }

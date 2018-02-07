@@ -1,13 +1,8 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {Payment} from './payment-page/payment/payment';
 import {BankPayment} from './payment-page/payment/payment-send/internet-bank/bank-payment';
 import {PaymentRequest} from './payment-page/payment/payment-recv/payment-request';
 import {CardPayment} from './payment-page/payment/payment-send/any-card/card-payment';
-import {of} from 'rxjs/observable/of';
-// import * as url from 'url';
-
-// const URL = require('url');
 
 @Injectable()
 export class BankingService {
@@ -28,7 +23,6 @@ export class BankingService {
 
   sendCardPayment(payment: CardPayment) {
     const jsoned = JSON.stringify(payment);
-    // const finalUrl = new URL(this.cardUrl, this.bankUrl).toString();
     const finalUrl = this.bankUrl + this.cardUrl;
     return this.send(finalUrl, jsoned);
   }
@@ -47,13 +41,6 @@ export class BankingService {
 
   send(url, body: string) {
     return this.http.post(url, body, this.httpOptions);
-    // .subscribe(result => {
-    //     console.log(result);
-    //   },
-    //   error => {
-    //     console.error(error);
-    //   });
-    // console.log('sent');
   }
 
   getPayments() {
